@@ -1,4 +1,4 @@
-# Diseno_de_interfaces_Juego
+# Proyecto Final
 
 ## Integrantes
 

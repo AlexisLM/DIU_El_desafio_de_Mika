@@ -200,6 +200,13 @@ const isValidUserName = function () {
 }
 
 const processUserName = function () {
+    if (!isValidUserName()) {
+        username.classList.add("username-wrong");
+        username.classList.remove("username-success");
+        username_error.classList.remove("hidden");
+        return;
+    }
+
     scores = localStorage.getItem("scores");
     if (!scores) {
         scores = [];
@@ -253,6 +260,7 @@ const scoreBoard = function () {
     setupScoreBoardEventListeners();
 
     char_word.innerHTML = "";
+    nickname = "";
     character.style.backgroundImage = char_img.score;
     container.style.backgroundImage = background[9];
     gameover_sound.play();
